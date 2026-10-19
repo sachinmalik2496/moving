@@ -53,7 +53,6 @@ const rupee = new Intl.NumberFormat("en-IN", {
 });
 
 const listEl = document.querySelector("#list");
-const statsEl = document.querySelector("#stats");
 const errorEl = document.querySelector("#error");
 const searchEl = document.querySelector("#search");
 const dialog = document.querySelector("#lightbox");
@@ -180,10 +179,6 @@ function sectionMarkup(title, items) {
 
 function render() {
   const items = visibleItems();
-  const all = catalogItems();
-  const availableCount = all.filter((item) => !item.sold).length;
-  const soldCount = all.length - availableCount;
-  statsEl.innerHTML = `<strong>${availableCount}</strong> available · <strong>${soldCount}</strong> sold`;
 
   document.querySelectorAll("[data-filter]").forEach((button) => {
     button.setAttribute("aria-pressed", String(button.dataset.filter === filter));
