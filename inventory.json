@@ -9,7 +9,7 @@
       "price": 7000,
       "condition": "Used",
       "sold": false,
-      "images": [],
+      "images": ["images/king-bed-1.jpg", "images/king-bed-2.jpg"],
       "note": ""
     },
     {
@@ -29,7 +29,7 @@
       "price": 18000,
       "condition": "Used",
       "sold": false,
-      "images": [],
+      "images": ["images/samsung-fridge-236-1.jpg", "images/samsung-fridge-236-2.jpg"],
       "note": ""
     },
     {
@@ -39,7 +39,7 @@
       "price": 4000,
       "condition": "Used",
       "sold": false,
-      "images": [],
+      "images": ["images/patio-set.jpg"],
       "note": ""
     },
     {
@@ -49,7 +49,7 @@
       "price": 17000,
       "condition": "Used",
       "sold": false,
-      "images": [],
+      "images": ["images/samsung-tv-43-1.jpg", "images/samsung-tv-43-2.jpg"],
       "note": ""
     },
     {
@@ -79,7 +79,7 @@
       "price": 15000,
       "condition": "Used",
       "sold": false,
-      "images": [],
+      "images": ["images/luminous-inverter.jpg"],
       "note": ""
     },
     {
@@ -89,7 +89,7 @@
       "price": 3000,
       "condition": "Used",
       "sold": false,
-      "images": [],
+      "images": ["images/philips-airfryer.jpg"],
       "note": ""
     },
     {
@@ -99,7 +99,7 @@
       "price": 1500,
       "condition": "Used",
       "sold": false,
-      "images": [],
+      "images": ["images/bean-bag-xxxl.jpg"],
       "note": ""
     },
     {
@@ -109,7 +109,7 @@
       "price": 3000,
       "condition": "Used",
       "sold": false,
-      "images": [],
+      "images": ["images/sofa-cum-bed-1.jpg", "images/sofa-cum-bed-2.jpg"],
       "note": ""
     },
     {
@@ -129,7 +129,7 @@
       "price": 12000,
       "condition": "Used",
       "sold": false,
-      "images": [],
+      "images": ["images/cultfit-bike.jpg"],
       "note": ""
     }
   ]
