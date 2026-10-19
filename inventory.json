@@ -1,0 +1,136 @@
+{
+  "title": "Moving sale",
+  "contact": "",
+  "items": [
+    {
+      "id": "king-bed",
+      "name": "King Bed",
+      "mrp": 12000,
+      "price": 7000,
+      "condition": "Used",
+      "sold": false,
+      "images": [],
+      "note": ""
+    },
+    {
+      "id": "samsung-washer-7kg",
+      "name": "Samsung Washing Machine Automatic 7Kg",
+      "mrp": 13500,
+      "price": 8000,
+      "condition": "Used",
+      "sold": false,
+      "images": [],
+      "note": ""
+    },
+    {
+      "id": "samsung-fridge-236",
+      "name": "Samsung 236L Double Door Fridge",
+      "mrp": 24000,
+      "price": 18000,
+      "condition": "Used",
+      "sold": false,
+      "images": [],
+      "note": ""
+    },
+    {
+      "id": "patio-set",
+      "name": "2 Seater Patio Table Chair",
+      "mrp": 7000,
+      "price": 4000,
+      "condition": "Used",
+      "sold": false,
+      "images": [],
+      "note": ""
+    },
+    {
+      "id": "samsung-tv-43",
+      "name": "Samsung 43\" LED Smart TV",
+      "mrp": 22000,
+      "price": 17000,
+      "condition": "Used",
+      "sold": false,
+      "images": [],
+      "note": ""
+    },
+    {
+      "id": "samsung-monitor-24",
+      "name": "Samsung 24\" Smart Monitor",
+      "mrp": 15000,
+      "price": 8000,
+      "condition": "Used",
+      "sold": false,
+      "images": [],
+      "note": ""
+    },
+    {
+      "id": "hp-monitor-22",
+      "name": "HP 22 inch Monitor",
+      "mrp": 8000,
+      "price": 4000,
+      "condition": "Used",
+      "sold": false,
+      "images": [],
+      "note": ""
+    },
+    {
+      "id": "luminous-inverter",
+      "name": "Luminous Inverter + Battery",
+      "mrp": 22000,
+      "price": 15000,
+      "condition": "Used",
+      "sold": false,
+      "images": [],
+      "note": ""
+    },
+    {
+      "id": "philips-airfryer",
+      "name": "Philips Air fryer",
+      "mrp": 5000,
+      "price": 3000,
+      "condition": "Used",
+      "sold": false,
+      "images": [],
+      "note": ""
+    },
+    {
+      "id": "bean-bag-xxxl",
+      "name": "Bean Bag XXXL",
+      "mrp": 4000,
+      "price": 1500,
+      "condition": "Used",
+      "sold": false,
+      "images": [],
+      "note": ""
+    },
+    {
+      "id": "sofa-cum-bed",
+      "name": "Sofa Cum Bed",
+      "mrp": 8000,
+      "price": 3000,
+      "condition": "Used",
+      "sold": false,
+      "images": [],
+      "note": ""
+    },
+    {
+      "id": "study-table",
+      "name": "Study Table",
+      "mrp": 3000,
+      "price": 1000,
+      "condition": "Used",
+      "sold": false,
+      "images": [],
+      "note": ""
+    },
+    {
+      "id": "cultfit-bike",
+      "name": "Cult Fit Stationary Bike",
+      "mrp": 20000,
+      "price": 12000,
+      "condition": "Used",
+      "sold": false,
+      "images": [],
+      "note": ""
+    }
+  ]
+}
