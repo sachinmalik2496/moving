@@ -13,16 +13,6 @@
       "note": ""
     },
     {
-      "id": "samsung-washer-7kg",
-      "name": "Samsung Washing Machine Automatic 7Kg",
-      "mrp": 13500,
-      "price": 8000,
-      "condition": "Used",
-      "sold": false,
-      "images": [],
-      "note": ""
-    },
-    {
       "id": "samsung-fridge-236",
       "name": "Samsung 236L Double Door Fridge",
       "mrp": 24000,
@@ -30,16 +20,6 @@
       "condition": "Used",
       "sold": false,
       "images": ["images/samsung-fridge-236-1.jpg", "images/samsung-fridge-236-2.jpg"],
-      "note": ""
-    },
-    {
-      "id": "patio-set",
-      "name": "2 Seater Patio Table Chair",
-      "mrp": 7000,
-      "price": 4000,
-      "condition": "Used",
-      "sold": false,
-      "images": ["images/patio-set.jpg"],
       "note": ""
     },
     {
@@ -59,7 +39,7 @@
       "price": 8000,
       "condition": "Used",
       "sold": false,
-      "images": [],
+      "images": ["images/samsung-monitor-24-1.jpg", "images/samsung-monitor-24-2.jpg"],
       "note": ""
     },
     {
@@ -69,17 +49,7 @@
       "price": 4000,
       "condition": "Used",
       "sold": false,
-      "images": [],
-      "note": ""
-    },
-    {
-      "id": "luminous-inverter",
-      "name": "Luminous Inverter + Battery",
-      "mrp": 22000,
-      "price": 15000,
-      "condition": "Used",
-      "sold": false,
-      "images": ["images/luminous-inverter.jpg"],
+      "images": ["images/hp-monitor-22.jpg"],
       "note": ""
     },
     {
@@ -114,12 +84,12 @@
     },
     {
       "id": "study-table",
-      "name": "Study Table",
-      "mrp": 3000,
-      "price": 1000,
+      "name": "Study Table and Chair",
+      "mrp": 5500,
+      "price": 3000,
       "condition": "Used",
       "sold": false,
-      "images": [],
+      "images": ["images/study-table-1.jpg", "images/study-table-2.jpg"],
       "note": ""
     },
     {
