@@ -1,7 +1,3 @@
-const STORAGE_KEY = "moving-sale-overrides-v1";
-const SELLER_KEY = "moving-sale-seller";
-const CONDITIONS = ["Like new", "Good", "Fair", "Used", "For parts"];
-
 const ICONS = {
   bed: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 18V8M3 14h18v4M21 18V11a2 2 0 0 0-2-2H9M7 9V7a2 2 0 0 1 2-2h2"/></svg>`,
   washer: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="3" width="16" height="18" rx="2"/><circle cx="12" cy="14" r="4"/><path d="M8 6h.01M11 6h3"/></svg>`,
@@ -60,9 +56,6 @@ const listEl = document.querySelector("#list");
 const statsEl = document.querySelector("#stats");
 const errorEl = document.querySelector("#error");
 const searchEl = document.querySelector("#search");
-const sellerEl = document.querySelector("#seller-mode");
-const publishEl = document.querySelector("#publish");
-const publishText = document.querySelector("#publish-text");
 const dialog = document.querySelector("#lightbox");
 const lightboxFrame = document.querySelector("#lightbox-frame");
 const lightboxCaption = document.querySelector("#lightbox-caption");
@@ -70,24 +63,8 @@ const prevBtn = document.querySelector("#lightbox-prev");
 const nextBtn = document.querySelector("#lightbox-next");
 
 let catalog = { title: "Moving sale", contact: "", items: [] };
-let overrides = loadOverrides();
 let filter = "all";
 let lightbox = { id: null, index: 0 };
-
-sellerEl.checked = localStorage.getItem(SELLER_KEY) === "1" || location.hash === "#edit";
-
-function loadOverrides() {
-  try {
-    const parsed = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
-    return parsed && typeof parsed === "object" ? parsed : {};
-  } catch {
-    return {};
-  }
-}
-
-function saveOverrides() {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(overrides));
-}
 
 function esc(value) {
   return String(value ?? "")
@@ -113,19 +90,13 @@ function iconFor(item) {
   return ICONS[kindOf(item)] || ICONS.box;
 }
 
-function same(a, b) {
-  return JSON.stringify(a ?? null) === JSON.stringify(b ?? null);
-}
-
-function mergedItems() {
+function catalogItems() {
   return catalog.items.map((base, order) => {
-    const patch = overrides[base.id] || {};
     const item = {
       ...base,
-      ...patch,
       id: base.id,
       order,
-      images: Array.isArray(patch.images) ? patch.images : base.images || [],
+      images: Array.isArray(base.images) ? base.images : [],
     };
     item.images = item.images.map(safeSrc).filter(Boolean);
     item.sold = Boolean(item.sold);
@@ -137,7 +108,7 @@ function mergedItems() {
 
 function visibleItems() {
   const query = searchEl.value.trim().toLowerCase();
-  return mergedItems()
+  return catalogItems()
     .filter((item) => {
       if (filter === "available" && item.sold) return false;
       if (filter === "sold" && !item.sold) return false;
@@ -147,19 +118,6 @@ function visibleItems() {
     .sort((a, b) => Number(a.sold) - Number(b.sold) || a.order - b.order);
 }
 
-function setOverride(id, patch, renderNow = true) {
-  const base = catalog.items.find((item) => item.id === id);
-  if (!base) return;
-  const next = { ...(overrides[id] || {}), ...patch };
-  for (const key of Object.keys(next)) {
-    if (same(next[key], base[key])) delete next[key];
-  }
-  if (Object.keys(next).length === 0) delete overrides[id];
-  else overrides[id] = next;
-  saveOverrides();
-  if (renderNow) render();
-}
-
 function money(amount) {
   return rupee.format(amount);
 }
@@ -167,14 +125,6 @@ function money(amount) {
 function offPercent(item) {
   if (item.mrp <= item.price || item.mrp <= 0) return 0;
   return Math.round((1 - item.price / item.mrp) * 100);
-}
-
-function conditionOptions(current) {
-  const values = CONDITIONS.includes(current) ? CONDITIONS : [current, ...CONDITIONS];
-  return values
-    .filter(Boolean)
-    .map((value) => `<option${value === current ? " selected" : ""}>${esc(value)}</option>`)
-    .join("");
 }
 
 function photoMarkup(item) {
@@ -196,42 +146,11 @@ function photoMarkup(item) {
     </button>`;
 }
 
-function editorMarkup(item) {
-  if (!sellerEl.checked) return "";
-  return `
-    <div class="edit">
-      <label>Name
-        <input data-id="${esc(item.id)}" data-field="name" value="${esc(item.name)}" />
-      </label>
-      <label>Condition
-        <select data-id="${esc(item.id)}" data-field="condition">${conditionOptions(item.condition)}</select>
-      </label>
-      <div class="pair">
-        <label>MRP
-          <input data-id="${esc(item.id)}" data-field="mrp" type="number" min="0" step="1" value="${item.mrp}" />
-        </label>
-        <label>Selling price
-          <input data-id="${esc(item.id)}" data-field="price" type="number" min="0" step="1" value="${item.price}" />
-        </label>
-      </div>
-      <label>Photos, one path per line
-        <textarea data-id="${esc(item.id)}" data-field="images" placeholder="images/${esc(item.id)}.jpg">${esc(item.images.join("\n"))}</textarea>
-      </label>
-      <label>Note
-        <input data-id="${esc(item.id)}" data-field="note" value="${esc(item.note || "")}" placeholder="Optional detail" />
-      </label>
-    </div>`;
-}
-
 function cardMarkup(item) {
   const off = offPercent(item);
   const mrp = item.mrp > item.price ? `<span class="mrp">${money(item.mrp)}</span>` : "";
   const offTag = off ? `<span class="off">${off}% off</span>` : "";
   const note = item.note ? `<p class="note">${esc(item.note)}</p>` : "";
-  const soldLabel = item.sold ? "Mark available" : "Mark sold";
-  const sellerButtons = sellerEl.checked
-    ? `<button class="mark" type="button" data-sold="${esc(item.id)}">${soldLabel}</button>`
-    : "";
   return `
     <article class="card${item.sold ? " sold" : ""}">
       ${photoMarkup(item)}
@@ -246,8 +165,6 @@ function cardMarkup(item) {
           ${offTag}
         </div>
         ${note}
-        ${sellerButtons}
-        ${editorMarkup(item)}
       </div>
     </article>`;
 }
@@ -263,7 +180,7 @@ function sectionMarkup(title, items) {
 
 function render() {
   const items = visibleItems();
-  const all = mergedItems();
+  const all = catalogItems();
   const availableCount = all.filter((item) => !item.sold).length;
   const soldCount = all.length - availableCount;
   statsEl.innerHTML = `<strong>${availableCount}</strong> available · <strong>${soldCount}</strong> sold`;
@@ -282,45 +199,11 @@ function render() {
   const html = `${sectionMarkup("Available", available)}${sectionMarkup("Sold", sold)}`;
   listEl.innerHTML = html || `<p class="empty">Nothing matches that search.</p>`;
 
-  const pending = Object.keys(overrides).length;
-  publishEl.hidden = pending === 0;
-  document.body.classList.toggle("has-edits", pending > 0);
-  publishText.textContent = pending
-    ? `${pending} item${pending === 1 ? "" : "s"} changed in this browser. Download the file, replace inventory.json, and push so everyone sees it.`
-    : "";
-
   if (dialog.open) paintLightbox();
 }
 
-function parseImages(value) {
-  return value
-    .split(/[\n,]/)
-    .map((part) => part.trim())
-    .filter(Boolean);
-}
-
-function readField(el) {
-  const id = el.dataset.id;
-  const field = el.dataset.field;
-  if (!id || !field) return null;
-  if (field === "name") {
-    const name = el.value.trim();
-    if (!name) return null;
-    return { id, patch: { name } };
-  }
-  if (field === "mrp" || field === "price") {
-    const amount = Number(el.value);
-    if (!Number.isFinite(amount) || amount < 0) return null;
-    return { id, patch: { [field]: amount } };
-  }
-  if (field === "images") return { id, patch: { images: parseImages(el.value) } };
-  if (field === "condition") return { id, patch: { condition: el.value } };
-  if (field === "note") return { id, patch: { note: el.value.trim() } };
-  return null;
-}
-
 function itemById(id) {
-  return mergedItems().find((item) => item.id === id);
+  return catalogItems().find((item) => item.id === id);
 }
 
 function paintLightbox() {
@@ -337,7 +220,7 @@ function paintLightbox() {
     lightbox.index = (lightbox.index + images.length) % images.length;
     lightboxFrame.innerHTML = `<img src="${esc(images[lightbox.index])}" alt="${esc(item.name)}">`;
   } else {
-    lightboxFrame.innerHTML = `<div class="lightbox-fallback">${iconFor(item)}<p>No photo yet. Add one under images/ while updating the inventory.</p></div>`;
+    lightboxFrame.innerHTML = `<div class="lightbox-fallback">${iconFor(item)}<p>No photo yet.</p></div>`;
   }
   const page = images.length ? `${lightbox.index + 1} / ${images.length}` : "No photo";
   lightboxCaption.innerHTML = `<strong>${esc(item.name)}</strong><span>${esc(item.condition || "")} · ${money(item.price)} · ${page}</span>`;
@@ -349,49 +232,9 @@ function openLightbox(id) {
   if (!dialog.open) dialog.showModal();
 }
 
-function exportInventory() {
-  const items = mergedItems().map((item) => ({
-    id: item.id,
-    name: item.name,
-    mrp: item.mrp,
-    price: item.price,
-    condition: item.condition || "Used",
-    sold: item.sold,
-    images: item.images,
-    note: item.note || "",
-  }));
-  const file = {
-    title: catalog.title || "Moving sale",
-    contact: catalog.contact || "",
-    items,
-  };
-  const blob = new Blob([`${JSON.stringify(file, null, 2)}\n`], { type: "application/json" });
-  const link = document.createElement("a");
-  link.href = URL.createObjectURL(blob);
-  link.download = "inventory.json";
-  link.click();
-  URL.revokeObjectURL(link.href);
-}
-
 listEl.addEventListener("click", (event) => {
-  const soldBtn = event.target.closest("[data-sold]");
-  if (soldBtn) {
-    const item = itemById(soldBtn.dataset.sold);
-    if (item) setOverride(item.id, { sold: !item.sold });
-    return;
-  }
   const photo = event.target.closest("[data-open]");
   if (photo) openLightbox(photo.dataset.open);
-});
-
-listEl.addEventListener("input", (event) => {
-  const change = readField(event.target);
-  if (change) setOverride(change.id, change.patch, false);
-});
-
-listEl.addEventListener("change", (event) => {
-  const change = readField(event.target);
-  if (change) setOverride(change.id, change.patch, true);
 });
 
 document.querySelector(".filters").addEventListener("click", (event) => {
@@ -402,22 +245,6 @@ document.querySelector(".filters").addEventListener("click", (event) => {
 });
 
 searchEl.addEventListener("input", () => render());
-
-sellerEl.addEventListener("change", () => {
-  localStorage.setItem(SELLER_KEY, sellerEl.checked ? "1" : "0");
-  const url = new URL(location.href);
-  if (sellerEl.checked) url.hash = "edit";
-  else url.hash = "";
-  history.replaceState(null, "", url);
-  render();
-});
-
-document.querySelector("#download").addEventListener("click", exportInventory);
-document.querySelector("#reset").addEventListener("click", () => {
-  overrides = {};
-  saveOverrides();
-  render();
-});
 
 document.querySelector("#lightbox-close").addEventListener("click", () => dialog.close());
 prevBtn.addEventListener("click", () => {

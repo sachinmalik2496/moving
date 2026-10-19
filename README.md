@@ -29,7 +29,7 @@ Photos live in [`images/`](images/). Example:
 
 Clicking a photo opens it larger. Several photos can be stepped through in that view.
 
-You can also turn on **Update inventory** on the site (or open the page with `#edit`). Mark an item sold, change the condition or price, then download `inventory.json` and replace this file before you push. Until that file is updated, a sold flag only sticks in the browser you used.
+Set `"sold": true` on an item and push. It shows under Sold at the bottom. The page does not edit the list itself.
 
 ## GitHub Pages
 
