@@ -101,6 +101,36 @@
       "sold": false,
       "images": ["images/cultfit-bike.jpg"],
       "note": ""
+    },
+    {
+      "id": "samsung-washer-7kg",
+      "name": "Samsung Washing Machine Automatic 7Kg",
+      "mrp": 13500,
+      "price": 8000,
+      "condition": "Used",
+      "sold": true,
+      "images": [],
+      "note": ""
+    },
+    {
+      "id": "patio-set",
+      "name": "2 Seater Patio Table Chair",
+      "mrp": 7000,
+      "price": 4000,
+      "condition": "Used",
+      "sold": true,
+      "images": ["images/patio-set.jpg"],
+      "note": ""
+    },
+    {
+      "id": "luminous-inverter",
+      "name": "Luminous Inverter + Battery",
+      "mrp": 22000,
+      "price": 15000,
+      "condition": "Used",
+      "sold": true,
+      "images": ["images/luminous-inverter.jpg"],
+      "note": ""
     }
   ]
 }
