@@ -346,6 +346,15 @@ h3 {
   font-size: 0.92rem;
 }
 
+.available {
+  margin: 0;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--good);
+}
+
+.available.later { color: var(--accent); }
+
 .card.sold h3,
 .card.sold .price { color: #5e564e; }
 

@@ -112,7 +112,7 @@ function visibleItems() {
       if (filter === "available" && item.sold) return false;
       if (filter === "sold" && !item.sold) return false;
       if (!query) return true;
-      return `${item.name} ${item.condition} ${item.note}`.toLowerCase().includes(query);
+      return `${item.name} ${item.condition} ${item.note} ${item.available}`.toLowerCase().includes(query);
     })
     .sort((a, b) => Number(a.sold) - Number(b.sold) || a.order - b.order);
 }
@@ -164,6 +164,7 @@ function cardMarkup(item) {
           ${offTag}
         </div>
         ${note}
+        ${item.available ? `<p class="available${item.available === "Available now" ? "" : " later"}">${esc(item.available)}</p>` : ""}
       </div>
     </article>`;
 }

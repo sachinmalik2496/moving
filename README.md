@@ -17,6 +17,7 @@ Each item:
 | `price` | Asking price |
 | `condition` | `Like new`, `Good`, `Fair`, `Used`, or `For parts` |
 | `sold` | `true` moves the item under Sold |
+| `available` | When it can be picked up, shown on the card |
 | `images` | List of photo paths or URLs |
 | `note` | Optional extra line |
 | `contact` | Optional phone or handle, shown in the header |

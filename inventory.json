@@ -9,8 +9,12 @@
       "price": 7000,
       "condition": "Used",
       "sold": false,
-      "images": ["images/king-bed-1.jpg", "images/king-bed-2.jpg"],
-      "note": ""
+      "images": [
+        "images/king-bed-1.jpg",
+        "images/king-bed-2.jpg"
+      ],
+      "note": "",
+      "available": "Available after 15th Nov"
     },
     {
       "id": "samsung-fridge-236",
@@ -19,8 +23,12 @@
       "price": 18000,
       "condition": "Used",
       "sold": false,
-      "images": ["images/samsung-fridge-236-1.jpg", "images/samsung-fridge-236-2.jpg"],
-      "note": ""
+      "images": [
+        "images/samsung-fridge-236-1.jpg",
+        "images/samsung-fridge-236-2.jpg"
+      ],
+      "note": "",
+      "available": "Available after 25th Nov"
     },
     {
       "id": "samsung-tv-43",
@@ -29,8 +37,12 @@
       "price": 17000,
       "condition": "Used",
       "sold": false,
-      "images": ["images/samsung-tv-43-1.jpg", "images/samsung-tv-43-2.jpg"],
-      "note": ""
+      "images": [
+        "images/samsung-tv-43-1.jpg",
+        "images/samsung-tv-43-2.jpg"
+      ],
+      "note": "",
+      "available": "Available now"
     },
     {
       "id": "samsung-monitor-24",
@@ -39,8 +51,12 @@
       "price": 8000,
       "condition": "Used",
       "sold": false,
-      "images": ["images/samsung-monitor-24-1.jpg", "images/samsung-monitor-24-2.jpg"],
-      "note": ""
+      "images": [
+        "images/samsung-monitor-24-1.jpg",
+        "images/samsung-monitor-24-2.jpg"
+      ],
+      "note": "",
+      "available": "Available now"
     },
     {
       "id": "hp-monitor-22",
@@ -49,8 +65,11 @@
       "price": 4000,
       "condition": "Used",
       "sold": false,
-      "images": ["images/hp-monitor-22.jpg"],
-      "note": ""
+      "images": [
+        "images/hp-monitor-22.jpg"
+      ],
+      "note": "",
+      "available": "Available now"
     },
     {
       "id": "philips-airfryer",
@@ -59,8 +78,11 @@
       "price": 3000,
       "condition": "Used",
       "sold": false,
-      "images": ["images/philips-airfryer.jpg"],
-      "note": ""
+      "images": [
+        "images/philips-airfryer.jpg"
+      ],
+      "note": "",
+      "available": "Available now"
     },
     {
       "id": "bean-bag-xxxl",
@@ -69,8 +91,11 @@
       "price": 1500,
       "condition": "Used",
       "sold": false,
-      "images": ["images/bean-bag-xxxl.jpg"],
-      "note": ""
+      "images": [
+        "images/bean-bag-xxxl.jpg"
+      ],
+      "note": "",
+      "available": "Available now"
     },
     {
       "id": "sofa-cum-bed",
@@ -79,8 +104,12 @@
       "price": 3000,
       "condition": "Used",
       "sold": false,
-      "images": ["images/sofa-cum-bed-1.jpg", "images/sofa-cum-bed-2.jpg"],
-      "note": ""
+      "images": [
+        "images/sofa-cum-bed-1.jpg",
+        "images/sofa-cum-bed-2.jpg"
+      ],
+      "note": "",
+      "available": "Available now"
     },
     {
       "id": "study-table",
@@ -89,8 +118,12 @@
       "price": 3000,
       "condition": "Used",
       "sold": false,
-      "images": ["images/study-table-1.jpg", "images/study-table-2.jpg"],
-      "note": ""
+      "images": [
+        "images/study-table-1.jpg",
+        "images/study-table-2.jpg"
+      ],
+      "note": "",
+      "available": "Available now"
     },
     {
       "id": "cultfit-bike",
@@ -99,8 +132,11 @@
       "price": 12000,
       "condition": "Used",
       "sold": false,
-      "images": ["images/cultfit-bike.jpg"],
-      "note": ""
+      "images": [
+        "images/cultfit-bike.jpg"
+      ],
+      "note": "",
+      "available": "Available now"
     },
     {
       "id": "samsung-washer-7kg",
@@ -110,7 +146,8 @@
       "condition": "Used",
       "sold": true,
       "images": [],
-      "note": ""
+      "note": "",
+      "available": "Available now"
     },
     {
       "id": "patio-set",
@@ -119,8 +156,11 @@
       "price": 4000,
       "condition": "Used",
       "sold": true,
-      "images": ["images/patio-set.jpg"],
-      "note": ""
+      "images": [
+        "images/patio-set.jpg"
+      ],
+      "note": "",
+      "available": "Available now"
     },
     {
       "id": "luminous-inverter",
@@ -129,8 +169,11 @@
       "price": 15000,
       "condition": "Used",
       "sold": true,
-      "images": ["images/luminous-inverter.jpg"],
-      "note": ""
+      "images": [
+        "images/luminous-inverter.jpg"
+      ],
+      "note": "",
+      "available": "Available now"
     }
   ]
 }
