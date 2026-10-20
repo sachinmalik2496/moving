@@ -283,11 +283,6 @@ async function init() {
     };
     document.querySelector("#title").textContent = catalog.title;
     document.title = catalog.title;
-    const contact = document.querySelector("#contact");
-    if (catalog.contact) {
-      contact.hidden = false;
-      contact.textContent = catalog.contact;
-    }
     errorEl.hidden = true;
     render();
   } catch (error) {
