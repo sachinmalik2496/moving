@@ -8,7 +8,7 @@
       "mrp": 12000,
       "price": 7000,
       "condition": "Used",
-      "sold": false,
+      "sold": true,
       "images": [
         "images/king-bed-1.jpg",
         "images/king-bed-2.jpg"
@@ -22,7 +22,7 @@
       "mrp": 24000,
       "price": 18000,
       "condition": "Used",
-      "sold": false,
+      "sold": true,
       "images": [
         "images/samsung-fridge-236-1.jpg",
         "images/samsung-fridge-236-2.jpg"
@@ -50,7 +50,7 @@
       "mrp": 15000,
       "price": 8000,
       "condition": "Used",
-      "sold": false,
+      "sold": true,
       "images": [
         "images/samsung-monitor-24-1.jpg",
         "images/samsung-monitor-24-2.jpg"
