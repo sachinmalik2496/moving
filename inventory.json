@@ -36,7 +36,7 @@
       "mrp": 22000,
       "price": 17000,
       "condition": "Used",
-      "sold": false,
+      "sold": true,
       "images": [
         "images/samsung-tv-43-1.jpg",
         "images/samsung-tv-43-2.jpg"
