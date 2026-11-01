@@ -77,7 +77,7 @@
       "mrp": 5000,
       "price": 3000,
       "condition": "Used",
-      "sold": false,
+      "sold": true,
       "images": [
         "images/philips-airfryer.jpg"
       ],
