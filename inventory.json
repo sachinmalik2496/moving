@@ -3,6 +3,20 @@
   "contact": "",
   "items": [
     {
+      "id": "magic-keyboard-ipad-pro-11",
+      "name": "Apple Magic Keyboard for iPad Pro 11\" (M4/M5)",
+      "mrp": 29999,
+      "price": 21000,
+      "condition": "Never Used, Open box",
+      "sold": false,
+      "images": [
+        "images/magic-keyboard-ipad-pro-11-1.jpg",
+        "images/magic-keyboard-ipad-pro-11-2.jpg"
+      ],
+      "note": "Warranty: 8 months remaining",
+      "available": "Available now"
+    },
+    {
       "id": "king-bed",
       "name": "King Bed",
       "mrp": 12000,
