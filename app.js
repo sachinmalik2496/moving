@@ -44,6 +44,9 @@ const KIND = {
   "sofa-cum-bed": "sofa",
   "study-table": "desk",
   "cultfit-bike": "bike",
+  "arzopa-z1fc-portable": "monitor",
+  "plants-pots": "box",
+  "gas-stove-2burner": "kitchen",
 };
 
 const rupee = new Intl.NumberFormat("en-IN", {

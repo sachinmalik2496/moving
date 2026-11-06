@@ -78,9 +78,52 @@
       "mrp": 8000,
       "price": 4000,
       "condition": "Used",
-      "sold": false,
+      "sold": true,
       "images": [
         "images/hp-monitor-22.jpg"
+      ],
+      "note": "",
+      "available": "Available now"
+    },
+    {
+      "id": "arzopa-z1fc-portable",
+      "name": "Arzopa Z1FC Portable Monitor (16 inch, 1080p, 144Hz)",
+      "mrp": 16000,
+      "price": 9000,
+      "condition": "Used",
+      "sold": false,
+      "images": [
+        "images/arzopa-z1fc-1.jpg",
+        "images/arzopa-z1fc-2.jpg",
+        "images/arzopa-z1fc-3.jpg"
+      ],
+      "note": "Portable IPS display with kickstand",
+      "available": "Available now"
+    },
+    {
+      "id": "plants-pots",
+      "name": "Plants with pots (assorted)",
+      "mrp": 0,
+      "price": 0,
+      "condition": "Used",
+      "sold": false,
+      "images": [
+        "images/plants-pots-1.jpg",
+        "images/plants-pots-2.jpg"
+      ],
+      "note": "Free — take what you need",
+      "available": "Available now"
+    },
+    {
+      "id": "gas-stove-2burner",
+      "name": "2-burner gas stove (Green Sahara)",
+      "mrp": 1200,
+      "price": 500,
+      "condition": "Used",
+      "sold": false,
+      "images": [
+        "images/gas-stove-1.jpg",
+        "images/gas-stove-2.jpg"
       ],
       "note": "",
       "available": "Available now"
