@@ -160,10 +160,24 @@
       "mrp": 8000,
       "price": 3000,
       "condition": "Used",
-      "sold": false,
+      "sold": true,
       "images": [
         "images/sofa-cum-bed-1.jpg",
         "images/sofa-cum-bed-2.jpg"
+      ],
+      "note": "",
+      "available": "Available now"
+    },
+    {
+      "id": "boat-stone-352-pro",
+      "name": "boAt Stone 352 Pro (Bluetooth speaker)",
+      "mrp": 2000,
+      "price": 800,
+      "condition": "Used",
+      "sold": false,
+      "images": [
+        "images/boat-stone-352-pro-1.jpg",
+        "images/boat-stone-352-pro-2.jpg"
       ],
       "note": "",
       "available": "Available now"

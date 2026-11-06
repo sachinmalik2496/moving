@@ -12,6 +12,7 @@ const ICONS = {
   desk: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 9h18M5 9v10M19 9v10M9 9v5h6"/></svg>`,
   bike: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="7" cy="16" r="3"/><circle cx="17" cy="16" r="3"/><path d="M7 16l4-7h4l2 7M11 9l-2 4h6"/></svg>`,
   box: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8l9-4 9 4-9 4-9-4z"/><path d="M3 8v8l9 4 9-4V8M12 12v8"/></svg>`,
+  speaker: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="8" width="8" height="8" rx="1"/><path d="M12 10v4l4-2-4-2zM17 9a5 5 0 0 1 0 6M19 7a8 8 0 0 1 0 10"/></svg>`,
 };
 
 const TINT = {
@@ -28,6 +29,7 @@ const TINT = {
   desk: "#e7eee4",
   bike: "#e4eee8",
   box: "#efe6da",
+  speaker: "#dfe8f4",
 };
 
 const KIND = {
@@ -47,6 +49,7 @@ const KIND = {
   "arzopa-z1fc-portable": "monitor",
   "plants-pots": "box",
   "gas-stove-2burner": "kitchen",
+  "boat-stone-352-pro": "speaker",
 };
 
 const rupee = new Intl.NumberFormat("en-IN", {
