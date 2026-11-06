@@ -3,6 +3,19 @@
   "contact": "",
   "items": [
     {
+      "id": "cultfit-bike",
+      "name": "Cult Fit Stationary Bike",
+      "mrp": 20000,
+      "price": 12000,
+      "condition": "Used",
+      "sold": false,
+      "images": [
+        "images/cultfit-bike.jpg"
+      ],
+      "note": "",
+      "available": "Available now"
+    },
+    {
       "id": "magic-keyboard-ipad-pro-11",
       "name": "Apple Magic Keyboard for iPad Pro 11\" (M4/M5)",
       "mrp": 29999,
@@ -192,19 +205,6 @@
       "images": [
         "images/study-table-1.jpg",
         "images/study-table-2.jpg"
-      ],
-      "note": "",
-      "available": "Available now"
-    },
-    {
-      "id": "cultfit-bike",
-      "name": "Cult Fit Stationary Bike",
-      "mrp": 20000,
-      "price": 12000,
-      "condition": "Used",
-      "sold": false,
-      "images": [
-        "images/cultfit-bike.jpg"
       ],
       "note": "",
       "available": "Available now"
