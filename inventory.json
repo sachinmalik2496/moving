@@ -234,6 +234,49 @@
       "available": "Available now"
     },
     {
+      "id": "flipkart-tower-air-cooler",
+      "name": "Flipkart SmartBuy Tower Air Cooler",
+      "mrp": 0,
+      "price": 3500,
+      "condition": "Used",
+      "sold": false,
+      "images": [
+        "images/flipkart-air-cooler-1.jpg",
+        "images/flipkart-air-cooler-2.jpg",
+        "images/flipkart-air-cooler-3.jpg"
+      ],
+      "note": "",
+      "available": "Available now"
+    },
+    {
+      "id": "vega-helmets-his-her",
+      "name": "His & Her Vega helmets (full-face black + open-face pink)",
+      "mrp": 0,
+      "price": 1200,
+      "condition": "Used",
+      "sold": false,
+      "images": [
+        "images/vega-helmets-1.jpg",
+        "images/vega-helmets-2.jpg"
+      ],
+      "note": "Sold as a pair",
+      "available": "Available now"
+    },
+    {
+      "id": "cushions-set-5",
+      "name": "Set of 5 decorative cushions (animal print)",
+      "mrp": 0,
+      "price": 1000,
+      "condition": "Used",
+      "sold": false,
+      "images": [
+        "images/cushions-set-1.jpg",
+        "images/cushions-set-2.jpg"
+      ],
+      "note": "",
+      "available": "Available now"
+    },
+    {
       "id": "luminous-inverter",
       "name": "Luminous Inverter + Battery",
       "mrp": 22000,

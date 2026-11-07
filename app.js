@@ -50,6 +50,9 @@ const KIND = {
   "plants-pots": "box",
   "gas-stove-2burner": "kitchen",
   "boat-stone-352-pro": "speaker",
+  "flipkart-tower-air-cooler": "power",
+  "vega-helmets-his-her": "box",
+  "cushions-set-5": "bag",
 };
 
 const rupee = new Intl.NumberFormat("en-IN", {
