@@ -53,6 +53,7 @@ const KIND = {
   "flipkart-tower-air-cooler": "power",
   "vega-helmets-his-her": "box",
   "cushions-set-5": "bag",
+  "water-drums-buckets": "box",
 };
 
 const rupee = new Intl.NumberFormat("en-IN", {
