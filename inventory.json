@@ -278,7 +278,7 @@
     },
     {
       "id": "water-drums-buckets",
-      "name": "Water drums (75L + 25L) with buckets",
+      "name": "Water drums (75L + 50L) with buckets",
       "mrp": 0,
       "price": 1500,
       "condition": "Used",
@@ -286,7 +286,7 @@
       "images": [
         "images/water-drums-buckets.jpg"
       ],
-      "note": "Sold together — 75L drum, 25L drum, and buckets",
+      "note": "Sold together — 75L drum, 50L drum, and buckets",
       "available": "Available now"
     },
     {
