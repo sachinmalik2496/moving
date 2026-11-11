@@ -48,12 +48,10 @@ const KIND = {
   "cultfit-bike": "bike",
   "arzopa-z1fc-portable": "monitor",
   "plants-pots": "box",
-  "gas-stove-2burner": "kitchen",
   "boat-stone-352-pro": "speaker",
   "flipkart-tower-air-cooler": "power",
   "vega-helmets-his-her": "box",
   "cushions-set-5": "bag",
-  "water-drums-buckets": "box",
 };
 
 const rupee = new Intl.NumberFormat("en-IN", {

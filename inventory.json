@@ -128,20 +128,6 @@
       "available": "Available now"
     },
     {
-      "id": "gas-stove-2burner",
-      "name": "2-burner gas stove (Green Sahara)",
-      "mrp": 1200,
-      "price": 500,
-      "condition": "Used",
-      "sold": false,
-      "images": [
-        "images/gas-stove-1.jpg",
-        "images/gas-stove-2.jpg"
-      ],
-      "note": "",
-      "available": "Available now"
-    },
-    {
       "id": "philips-airfryer",
       "name": "Philips Air fryer",
       "mrp": 5000,
@@ -274,19 +260,6 @@
         "images/cushions-set-2.jpg"
       ],
       "note": "",
-      "available": "Available now"
-    },
-    {
-      "id": "water-drums-buckets",
-      "name": "Water drums (75L + 50L) with buckets",
-      "mrp": 0,
-      "price": 1500,
-      "condition": "Used",
-      "sold": false,
-      "images": [
-        "images/water-drums-buckets.jpg"
-      ],
-      "note": "Sold together — 75L drum, 50L drum, and buckets",
       "available": "Available now"
     },
     {
