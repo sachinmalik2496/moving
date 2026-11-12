@@ -10,7 +10,10 @@
       "condition": "Used",
       "sold": false,
       "images": [
-        "images/cultfit-bike.jpg"
+        "images/cultfit-bike.jpg",
+        "images/cultfit-bike-2.jpg",
+        "images/cultfit-bike-3.jpg",
+        "images/cultfit-bike-4.jpg"
       ],
       "note": "",
       "available": "Available now"
@@ -134,7 +137,9 @@
       "condition": "Used",
       "sold": false,
       "images": [
-        "images/bean-bag-xxxl.jpg"
+        "images/bean-bag-xxxl.jpg",
+        "images/bean-bag-xxxl-2.jpg",
+        "images/bean-bag-xxxl-3.jpg"
       ],
       "note": "",
       "available": "Available now"
