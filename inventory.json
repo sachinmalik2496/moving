@@ -114,20 +114,6 @@
       "available": "Available now"
     },
     {
-      "id": "plants-pots",
-      "name": "Plants with pots (assorted)",
-      "mrp": 0,
-      "price": 0,
-      "condition": "Used",
-      "sold": false,
-      "images": [
-        "images/plants-pots-1.jpg",
-        "images/plants-pots-2.jpg"
-      ],
-      "note": "Free — take what you need",
-      "available": "Available now"
-    },
-    {
       "id": "philips-airfryer",
       "name": "Philips Air fryer",
       "mrp": 5000,

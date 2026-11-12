@@ -47,7 +47,6 @@ const KIND = {
   "study-table": "desk",
   "cultfit-bike": "bike",
   "arzopa-z1fc-portable": "monitor",
-  "plants-pots": "box",
   "boat-stone-352-pro": "speaker",
   "flipkart-tower-air-cooler": "power",
   "vega-helmets-his-her": "box",
